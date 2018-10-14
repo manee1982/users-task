@@ -37,13 +37,13 @@ public class UsersDetails extends AppCompatActivity {
 
         usersIntent = getIntent();
         Log.d("Extras", usersIntent.getStringExtra("_ID"));
-        getUserData(usersIntent.getStringExtra("_ID"));
+        getUserData();
     }
 
     /*
      *   Fetch Note record from SQLite database
      */
-    private void getUserData(String userRcdID) {
+    private void getUserData() {
         // Open database and get data from there
         dbHelper = new DBHelper(getApplicationContext());
         // Gets the data repository in write mode
